@@ -36,7 +36,7 @@
 	},
 	"deprecated": false,
 	"description": "MA Native - Native plugins for MA Mobile",
-	"homepage": "https://github.com/ma-dev-global/ma-native#ma-app-update#readme",
+	"homepage": "https://github.com/ma-dev-global/ma-native#readme",
 	"license": "MIT",
 	"module": "index.js",
 	"name": "ma-native/ma-app-update",
@@ -46,7 +46,7 @@
 	},
 	"repository": {
 	  "type": "git",
-	  "url": "git+https://github.com/ma-dev-global/ma-native#ma-app-update.git"
+	  "url": "git+https://github.com/ma-dev-global/ma-native#ma-app-update"
 	},
 	"typings": "index.d.ts",
 	"version": "0.0.1"
