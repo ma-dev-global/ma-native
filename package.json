@@ -1,54 +1,19 @@
 {
-	"_from": "ma-native/ma-app-update",
-	"_id": "ma-native/ma-app-update@5.21.5",
-	"_inBundle": false,
-	"_integrity": "sha512-TQVnTUOUBzK82wA7KqiNiHJ75AQdRcVcu1b6xs3Mu+nlRanqJECVhYImkyDCi6gzXvQ/Tge0gPoIOdaPS3vICw==",
-	"_location": "/ma-native/ma-app-update",
-	"_phantomChildren": {},
-	"_requested": {
-	  "type": "tag",
-	  "registry": true,
-	  "raw": "ma-native/ma-app-update",
-	  "name": "ma-native/ma-app-update",
-	  "escapedName": "ma-native%2fma-app-update",
-	  "scope": "ma-native",
-	  "rawSpec": "",
-	  "saveSpec": null,
-	  "fetchSpec": "latest"
-	},
-	"_requiredBy": [
-	  "#USER",
-	  "/"
-	],
-	"_resolved": "",
-	"_shasum": "81d27de3b515bbc22f8ea45d073853ffc973e048",
-	"_spec": "ma-app-update",
-	"_where": "D:\\git\\mr\\manage-america-mobile",
-	"author": {
-	  "name": "ionic"
-	},
-	"bugs": {
-	  "url": "https://github.com/ma-dev-global/ma-native/issues"
-	},
-	"bundleDependencies": false,
-	"dependencies": {
-	  "@types/cordova": "latest"
-	},
-	"deprecated": false,
-	"description": "MA Native - Native plugins for MA Mobile",
-	"homepage": "https://github.com/ma-dev-global/ma-native#readme",
-	"license": "MIT",
-	"module": "index.js",
-	"name": "ma-native/ma-app-update",
-	"peerDependencies": {
-	  "rxjs": "^5.5.0 || ^6.5.0",
-	  "@ionic-native/core": "^5.1.0"
-	},
-	"repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/ma-dev-global/ma-native#ma-app-update"
-	},
-	"typings": "index.d.ts",
-	"version": "0.0.1"
-  }
-  
+  "name": "ma-app-update",
+  "version": "1.0.0",
+  "description": "MA Native plugin for MA MObile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ma-dev-global/ma-native.git#ma-app-update"
+  },
+  "author": "Matthew Rein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ma-dev-global/ma-native/issues"
+  },
+  "homepage": "https://github.com/ma-dev-global/ma-native/tree/ma-app-update#readme"
+}
