@@ -67,7 +67,7 @@ public class MaAppUpdate extends CordovaPlugin {
 					e.printStackTrace();
 				}
 			} else {
-				Log.i(MaAppUpdate.class.getSimpleName(), String.format("No Update Available: ", Integer.toString(appUpdateInfo.updateAvailability()));
+				Log.i(MaAppUpdate.class.getSimpleName(), String.format("No Update Available: %s", Integer.toString(appUpdateInfo.updateAvailability()));
 				callbackContext.success("Success");
 			}
 		});
