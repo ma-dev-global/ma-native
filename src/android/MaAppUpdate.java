@@ -53,6 +53,7 @@ public class MaAppUpdate extends CordovaPlugin {
 		Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
 		appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
 			Log.i(MaAppUpdate.class.getSimpleName(), String.format("Play Store Package: %s", appUpdateInfo.packageName()));
+			Log.i(MaAppUpdate.class.getSimpleName(), String.format("Play Store Vesrion: %s", Integer.toString(appUpdateInfo.availableVersionCode())));
 			if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
 				Log.i(MaAppUpdate.class.getSimpleName(), "Immediate Update Not Allowed");
 				callbackContext.error("U01");
@@ -66,7 +67,7 @@ public class MaAppUpdate extends CordovaPlugin {
 					e.printStackTrace();
 				}
 			} else {
-				Log.i(MaAppUpdate.class.getSimpleName(), "No Update AVailable");
+				Log.i(MaAppUpdate.class.getSimpleName(), String.format("No Update Available: ", Integer.toString(appUpdateInfo.updateAvailability()));
 				callbackContext.success("Success");
 			}
 		});
