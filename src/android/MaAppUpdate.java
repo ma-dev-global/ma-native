@@ -48,13 +48,13 @@ public class MaAppUpdate extends CordovaPlugin {
 
 	private void checkAndForceUpdate (CallbackContext callbackContext) {
 		currentCallbackContext.set(callbackContext);
-		Log.i("Requesting Play Store Update Information");
+		Log.i(MaAppUpdate.class.getSimpleName(), "Requesting Play Store Update Information");
 		AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(cordova.getContext());
 		Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
 		appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
-			Log.i("Play Store Version: %s", Integer.toString(appUpdateInfo.availableVersionCode()));
+			Log.i(MaAppUpdate.class.getSimpleName(), String.format("Play Store Version: %s", Integer.toString(appUpdateInfo.availableVersionCode())));
 			if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-				Log.i("Immediate Update Not Allowed");
+				Log.i(MaAppUpdate.class.getSimpleName(), "Immediate Update Not Allowed");
 				callbackContext.error("U01");
 			} else if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE ) {
 				try{
@@ -66,12 +66,12 @@ public class MaAppUpdate extends CordovaPlugin {
 					e.printStackTrace();
 				}
 			} else {
-				Log.i("No Update AVailable");
+				Log.i(MaAppUpdate.class.getSimpleName(), "No Update AVailable");
 				callbackContext.success("Success");
 			}
 		});
-		appUpdateInfo.addOnFailureListener(e -> {
-			Log.i("Failure Event");
+		appUpdateInfoTask.addOnFailureListener(e -> {
+			Log.i(MaAppUpdate.class.getSimpleName(), "Failure Event");
 			e.printStackTrace();
 			callbackContext.error("U04");
 		});
