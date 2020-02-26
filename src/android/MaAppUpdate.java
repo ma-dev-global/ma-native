@@ -57,7 +57,7 @@ public class MaAppUpdate extends CordovaPlugin {
 			if (!appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
 				Log.i(MaAppUpdate.class.getSimpleName(), "Immediate Update Not Allowed");
 				callbackContext.error("U01");
-			} else if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE ) {
+			} else if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE || appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS ) {
 				try{
 					if(appUpdateManager.startUpdateFlowForResult(appUpdateInfo,	AppUpdateType.IMMEDIATE, cordova.getActivity(), REQUEST_CODE)){} else {
 						callbackContext.error("U02");
